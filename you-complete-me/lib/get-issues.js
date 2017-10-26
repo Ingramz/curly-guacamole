@@ -36,12 +36,12 @@
             issue.fixits = [];
             return Promise.resolve(issue);
           }
-        })).then(function(issues) {
-          return {
-            issues: issues,
-            filetypes: filetypes
-          };
-        });
+        }));
+      }).then(function(issues) {
+        return {
+          issues: issues,
+          filetypes: filetypes
+        };
       });
     });
   };
