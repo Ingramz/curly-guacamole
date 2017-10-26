@@ -55,9 +55,9 @@
           return waitsForPromise(function() {
             return atom.workspace.open("" + project + path.sep + "input.tex").then(function(editor) {
               return Promise.resolve(editor.save());
-            }).then(function() {
-              return expect(builder.build).toHaveBeenCalled();
             });
+          }).then(function() {
+            return expect(builder.build).toHaveBeenCalled();
           });
         });
         it('does nothing if config disabled', function() {
@@ -67,9 +67,9 @@
           return waitsForPromise(function() {
             return atom.workspace.open("" + project + path.sep + "input.tex").then(function(editor) {
               return Promise.resolve(editor.save());
-            }).then(function() {
-              return expect(builder.build).not.toHaveBeenCalled();
             });
+          }).then(function() {
+            return expect(builder.build).not.toHaveBeenCalled();
           });
         });
         return it('does nothing if current file is not a .tex file', function() {
@@ -79,9 +79,9 @@
           return waitsForPromise(function() {
             return atom.workspace.open("" + project + path.sep + "dummy.file").then(function(editor) {
               return Promise.resolve(editor.save());
-            }).then(function() {
-              return expect(builder.build).not.toHaveBeenCalled();
             });
+          }).then(function() {
+            return expect(builder.build).not.toHaveBeenCalled();
           });
         });
       });
