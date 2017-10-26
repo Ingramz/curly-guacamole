@@ -94,11 +94,11 @@
               _this.cssCache.put(path, result.file.getPath());
             }
             return [found, result];
-          })["catch"](function(e) {
-            return console.error(e.message, e.stack);
           });
         };
-      })(this));
+      })(this))["catch"](function(e) {
+        return console.error(e.message, e.stack);
+      });
     },
     parseSelectedCSSSelector: function() {
       var editor;
